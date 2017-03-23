@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    >
+
+   <include android:id="@+id/topbar" layout="@layout/view_header" />
+
+    <!-- 底部工具栏 -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/box1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickBox"
+
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_home"
+                android:layout_gravity="center_horizontal"
+                style="@style/style_toolbar_image"
+                android:src="@drawable/shouye"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="首页"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/box2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickBox"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_list"
+                android:layout_gravity="center_horizontal"
+                style="@style/style_toolbar_image"
+                android:src="@drawable/tongxunlu"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通讯录"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/box3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="clickBox"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_me"
+                android:layout_gravity="center_horizontal"
+                style="@style/style_toolbar_image"
+                android:src="@drawable/wo"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="1dp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <!--碎片切换的区域-->
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/toolbar"
+        android:layout_below="@id/topbar"
+        ></FrameLayout>
+
+
+</RelativeLayout>

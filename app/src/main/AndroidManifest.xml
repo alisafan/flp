@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fanfan.sns326">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--注册和短信验证 自动获取短信验证-->
+    <!--
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--/注册和短信验证-->
+    <!--第三方登录-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+     检测网络状态 -->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+     获取mac地址作为用户的备用唯一标识 -->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+     获取用户手机的IMEI，用来唯一的标识用户。 -->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+     缓存资源优先存入SDcard -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!--<uses-permission android:name="android.permission.INTERNET" />
+     允许应用程序联网 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 用于加载图片 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 用于人人SSO登陆 -->
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <!-- 用于人人SSO登陆 -->
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <!-- 用于人人SSO登陆 -->
+    <!--/第三方登录-->
+
+    <!-- pic -->
+    <!--
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- /pic -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+
+
+
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/start"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- 友推渠道号，应用名(英文或拼音)+"_yt"，如：“jd_yt”，用于识别通过友推活动下载的应用，请正确填写，否则无法正确统计 -->
+        <meta-data
+            android:name="YOUTUI_CHANNEL"
+            android:value="youtui-share-demo_yt" >
+        </meta-data>
+        <!-- qq回调需要注册该activity -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- qq授权需要注册该activity -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1101255276" />
+            </intent-filter>
+        </activity>
+        <!-- 应用授权 activity -->
+        <activity
+            android:name="cn.bidaround.ytcore.login.AuthActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            />
+        <!-- 起始页面 -->
+        <activity
+            android:name=".activity.StartActivity"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- /起始页面 -->
+        <!--登录页面-->
+        <activity android:name=".activity.LoginActivity"
+            >
+
+        </activity>
+        <activity android:name=".activity.RegisterActivity"
+            >
+
+        </activity>
+        <!--主页面-->
+        <activity android:name=".activity.MainActivity"
+            >
+
+        </activity>
+        <!--搜索界面-->
+        <activity android:name=".activity.SearchActivity">
+
+        </activity>
+        <!--/搜索界面-->
+        <!--编辑头像、修改密码界面-->
+        <activity android:name=".activity.EditorActivity"
+            >
+
+        </activity>
+        <!-- 某个用户的详细信息界面(点击其他用户头像所到达的界面)-->
+        <activity android:name=".activity.MeActivity"
+            >
+
+        </activity>
+
+        <!--扫一扫-->
+        <activity android:name="com.zijunlin.Zxing.Demo.CaptureActivity">
+
+        </activity>
+        <!--显示图片-->
+        <activity android:name="com.lyk.weixin.image.image.ImagePagerActivity" />
+        <!--/显示图片-->
+
+
+        <!-- 发表帖子页面 -->
+        <activity
+            android:name=".pic.PublishedActivity"
+            android:configChanges="orientation|keyboardHidden"
+            >
+
+        </activity>
+        <activity
+            android:name=".pic.view.TestPicActivity"
+            />
+        <activity
+            android:name=".pic.view.ImageGridActivity"
+            />
+        <activity
+            android:name=".pic.view.PhotoActivity"
+            />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <!-- /发表帖子页面 -->
+        <activity android:name=".activity.PostDetailActivity"></activity>
+
+        <!--回复帖子页面-->
+        <activity android:name=".activity.ReplyPostActivity">
+
+        </activity>
+        <!--/回复帖子页面-->
+        <!--联系人案例  可有可无-->
+        <activity android:name="com.wesley.quickactionbar.MainActivity">
+
+        </activity>
+        <!--/联系人案例-->
+    </application>
+
+</manifest>

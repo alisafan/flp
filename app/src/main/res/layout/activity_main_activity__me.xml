@@ -1,0 +1,280 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include android:id="@+id/topbar" layout="@layout/view_header" />
+
+    <LinearLayout
+        android:id="@+id/uploadLayout"
+        android:background="#f2f2f2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <!--头像部分-->
+        <LinearLayout
+            android:id="@+id/box1"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--一行-->
+            <RelativeLayout
+                android:id="@+id/line_ava"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                >
+
+                <!-- 头像 -->
+                <ImageView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_launcher"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_uname"
+                    android:text="用户名"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <Button
+                    android:id="@+id/btn_guanzhu"
+                    android:text="+关注"
+                    android:textSize="14sp"
+                    android:textColor="#fff"
+                    android:background="@drawable/btn_register"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:onClick="clickGuanzhu"
+                    android:layout_marginRight="16dp"
+                    android:layout_width="66dp"
+                    android:layout_height="30dp"
+                    />
+            </RelativeLayout>
+            <!--线-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f2f2f2"/>
+            <!--帖子、关注、粉丝-->
+            <LinearLayout
+                android:id="@+id/line_tongji"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/tj1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:onClick="clickBox"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_no_post"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_post"
+                        android:text="帖子"
+                        android:textColor="#999"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tj2"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:onClick="clickBox"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_no_guanzhu"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_guanzhu"
+                        android:text="关注"
+                        android:textColor="#999"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tj3"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:onClick="clickBox"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_no_fans"
+                        android:text="18"
+                        android:textStyle="bold"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_fans"
+                        android:text="粉丝"
+                        android:textColor="#999"
+                        android:layout_marginTop="1dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--/头像部分-->
+
+        <!--个人部分：我的帖子、我的回复、我的赞-->
+        <LinearLayout
+            android:id="@+id/box3"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            >
+
+            <!--一行-->
+            <RelativeLayout
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <ImageView
+                    android:src="@drawable/a_9"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    />
+
+                <TextView
+                    android:text="我的帖子"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f2f2f2"/>
+
+            <!--一行-->
+            <RelativeLayout
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <ImageView
+                    android:src="@drawable/a__"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    />
+
+                <TextView
+                    android:text="我的回复"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f2f2f2"/>
+
+            <!--一行-->
+            <RelativeLayout
+                android:id="@+id/line6"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                >
+
+                <ImageView
+                    android:src="@drawable/a_a"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    />
+
+                <TextView
+                    android:text="我的赞"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="72dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <!--/个人部分：我的帖子、我的回复、我的赞-->
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.fanfan.sns326.activity.LoginActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_arrows"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+       <!-- <ImageView
+            android:id="@+id/iv_login_arrows"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/arrows" />-->
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_welcome"
+        android:layout_below="@id/rl_arrows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="35dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢迎来到凡凡社交"
+            android:textColor="#ff495a"
+            android:textSize="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_below="@id/ll_welcome"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/ed_uname"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:padding="2dp"
+            android:background="@android:color/white"
+            android:hint="手机号"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:background="#ccc"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="20dp"/>
+        <EditText
+            android:id="@+id/ed_upass"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:padding="2dp"
+            android:password="true"
+            android:background="@android:color/white"
+            android:hint="密码"
+            android:textSize="15dp" />
+        <LinearLayout
+            android:background="#ccc"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+    </LinearLayout>
+
+
+
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_below="@id/ll_info"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_register"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="登录"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_line"
+        android:layout_below="@id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_login_line"
+            android:orientation="vertical"
+            android:background="#ccc"
+            android:layout_centerInParent="true"
+            android:layout_width="1dp"
+            android:layout_height="15dp"/>
+
+        <TextView
+            android:id="@+id/clickReg"
+            android:text="注   册"
+            android:textSize="15sp"
+            android:textColor="@color/colorpress"
+            android:layout_toLeftOf="@id/ll_login_line"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_login_forgetpwd"
+            android:text="忘记密码"
+            android:textSize="15sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_toRightOf="@id/ll_login_line"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/loginQQ"
+                android:text="QQ登录"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+

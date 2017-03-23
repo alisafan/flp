@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/uploadLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical" >
+
+
+    <!--头像部分-->
+    <LinearLayout
+        android:id="@+id/box1"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--一行-->
+        <RelativeLayout
+            android:id="@+id/line_ava"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            >
+            <ImageView
+                android:id="@+id/avatarImg"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_centerVertical="true"
+                android:onClick="clickAvatar"
+                android:src="@drawable/ic_launcher"
+                />
+
+            <TextView
+                android:id="@+id/tv_uname_me"
+                android:text="用户名"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <ImageView
+                android:id="@+id/iv_btn_qr"
+                android:src="@drawable/qr2"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2"/>
+        <LinearLayout
+            android:id="@+id/line_tongji"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:gravity="center_vertical">
+
+
+
+            <LinearLayout
+                android:id="@+id/tj1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="clickBox"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_post_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"/>
+
+                <TextView
+                    android:id="@+id/tv_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="帖子"
+                    android:textColor="#999"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tj2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="clickBox"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_guanzhu_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"/>
+
+                <TextView
+                    android:id="@+id/tv_guanzhu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关注"
+                    android:textColor="#999"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tj3"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:onClick="clickBox"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_fans_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"/>
+
+                <TextView
+                    android:id="@+id/tv_fans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="粉丝"
+                    android:textColor="#999"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="1dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!--个人部分：我的帖子、我的回复、我的赞-->
+    <LinearLayout
+        android:id="@+id/box2"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        >
+
+        <!--一行-->
+        <RelativeLayout
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+            <ImageView
+                android:src="@drawable/a_9"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                />
+
+            <TextView
+                android:text="我的帖子"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2"/>
+
+        <!--一行-->
+        <RelativeLayout
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+            <ImageView
+                android:src="@drawable/a__"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                />
+
+            <TextView
+                android:text="我的回复"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2"/>
+
+        <!--一行-->
+        <RelativeLayout
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            >
+
+            <ImageView
+                android:src="@drawable/a_a"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                />
+
+            <TextView
+                android:text="我的赞"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <!--/个人部分：我的帖子、我的回复、我的赞-->
+
+
+    <!--个人部分-->
+    <LinearLayout
+        android:id="@+id/box3"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        >
+
+        <!--一行-->
+        <RelativeLayout
+            android:id="@+id/line1back"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:onClick="line1Click"
+            >
+
+            <ImageView
+                android:src="@drawable/tuichu"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                />
+
+            <TextView
+                android:text="退出当前账号"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="72dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
